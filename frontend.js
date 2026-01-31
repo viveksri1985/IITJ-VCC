@@ -6,7 +6,7 @@ const DB_Server_IP = '10.0.2.4';
 
 app.get('/',async (req, res) => {
 try{
-const response = await axios.get(`http://${DB_Server_IP}:3000/status`);
+const response = await axios.get(`http://${DB_Server_IP}:5000/status`);
 res.send(`Hey Vivek! This is Frontend calling Backend: Got response:-> ${response.data.message}`);
 }catch(error) {
 res.status(500).send({
